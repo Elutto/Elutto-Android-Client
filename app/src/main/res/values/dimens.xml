@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_article_thumbnail">48dp</dimen>
+    <dimen name="list_item_article_space">1px</dimen>
+    <dimen name="list_item_article_vertical_margin">8dp</dimen>
+    <dimen name="list_item_article_horizontal_margin">6dp</dimen>
+
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="regular_offset">16dp</dimen>
+</resources>

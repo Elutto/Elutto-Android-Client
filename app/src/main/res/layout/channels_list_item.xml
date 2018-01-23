@@ -1,0 +1,189 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <!-- Channel avatar, channel title OR event avatar, event title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_item_article_horizontal_margin"
+        android:layout_marginRight="@dimen/list_item_article_horizontal_margin"
+        android:layout_marginTop="@dimen/list_item_article_vertical_margin"
+        android:orientation="horizontal">
+
+        <!-- Channel avatar  -->
+        <LinearLayout
+            android:id="@+id/channel_summary_avatar"
+            android:layout_width="@dimen/list_item_article_thumbnail"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/list_item_article_horizontal_margin"
+            android:orientation="vertical"/>
+
+        <!-- Channel title  -->
+        <android.support.text.emoji.widget.EmojiTextView
+            android:id="@+id/channel_summary_title"
+            style="style/TextAppearance.Medium"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:breakStrategy="high_quality"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <!-- Event RSVP deadline -->
+        <TextView
+            style="style/TextAppearance.Medium"
+            android:id="@+id/channel_summary_event_rsvp_time"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+    </LinearLayout>
+
+    <!-- Event info -->
+    <LinearLayout
+        android:id="@+id/channel_summary_event_info_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_item_article_thumbnail"
+        android:layout_marginRight="@dimen/list_item_article_horizontal_margin"
+        android:layout_marginBottom="@dimen/list_item_article_vertical_margin"
+        android:orientation="vertical">
+
+        <!-- Users who declared accepted -->
+        <LinearLayout
+            android:id="@+id/channel_summary_event_accepted_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- accepted -->
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/channel_summary_thumbs_up_label"
+                android:textColor="@color/green_900"
+                style="@style/TextAppearance.Label.Short"/>
+
+            <TextView
+                style="style/TextAppearance.Medium"
+                android:textColor="@color/green_900"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Noah, Mason, Jacob, William, Ethan, James, Alexander, Slawomir, Milosh"/>
+        </LinearLayout>
+
+        <!-- Users who declared decliend -->
+        <LinearLayout
+            android:id="@+id/channel_summary_event_declined_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/channel_summary_thumbs_down_label"
+                android:textColor="@color/red_900"
+                style="@style/TextAppearance.Label.Short"/>
+
+            <TextView
+                style="style/TextAppearance.Medium"
+                android:textColor="@color/red_900"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="Marry, John"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Message avatar, last message text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/list_item_article_horizontal_margin"
+        android:layout_marginRight="@dimen/list_item_article_horizontal_margin"
+        android:layout_marginBottom="@dimen/list_item_article_vertical_margin"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Message avatar  -->
+        <org.apmem.tools.layouts.FlowLayout
+            android:id="@+id/channel_summary_message_avatar"
+            android:layout_width="@dimen/list_item_article_thumbnail"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:layout_marginRight="@dimen/list_item_article_horizontal_margin"/>
+
+        <!-- Message body  -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Last message time and author -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- last message time -->
+                <TextView
+                    android:id="@+id/channel_summary_last_message_tm"
+                    style="style/TextAppearance.Small"
+                    android:layout_marginRight="6sp"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"/>
+
+                <!-- new messages status -->
+                <com.mikepenz.iconics.view.IconicsTextView
+                    style="style/TextAppearance.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginRight="1sp"
+                    android:text="{faw-comment-o}"/>
+
+                <TextView
+                    android:id="@+id/channel_summary_message_count"
+                    style="style/TextAppearance.Small"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <!-- last message body -->
+            <android.support.text.emoji.widget.EmojiTextView
+                android:id="@+id/channel_summary_body"
+                style="style/TextAppearance.Medium"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:breakStrategy="high_quality"
+                android:maxLines="3"
+                android:ellipsize="end"/>
+
+            <!-- Channel participant names -->
+            <android.support.text.emoji.widget.EmojiTextView
+                android:id="@+id/channel_summary_participant_names"
+                style="style/TextAppearance.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

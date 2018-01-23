@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.elutto.app">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.elutto.app.base.App"
+        android:theme="@style/Theme.Main">
+        <activity android:name=".ui.ListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ArticleDetailActivity"
+            android:label=""
+            android:parentActivityName=".ui.ListActivity" />
+        <activity
+            android:name=".ui.ViewSamplesActivity"
+            android:label="Samples"
+            android:parentActivityName=".ui.ListActivity" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".ui.ListActivity" />
+        <!-- Google FCM support, https://goo.gl/ZEAsvk -->
+        <service
+            android:name=".serv.EluttoFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".serv.EluttoFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <!-- End: Google FCM support -->
+    </application>
+
+</manifest>

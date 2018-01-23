@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "647771646423",
+    "firebase_url": "https://elutto-com.firebaseio.com",
+    "project_id": "elutto-com",
+    "storage_bucket": "elutto-com.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647771646423:android:0fc871e91b894ca4",
+        "android_client_info": {
+          "package_name": "com.elutto.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647771646423-1qcf139k5kbu2k81lug19vf5e0o9avgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elutto.app",
+            "certificate_hash": "0f068b807e1d76e071b46c05c358dbf7230f93d6"
+          }
+        },
+        {
+          "client_id": "647771646423-p8c1rkvbgb8talag9k3q76vaefldh0dm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_gZTGrV4nfySu--tQB8zsafEvQLPssTw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647771646423-p8c1rkvbgb8talag9k3q76vaefldh0dm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
